@@ -18,7 +18,7 @@ function app(){
         // start app?
         var token = "da9d4d1c7a5011d319df5dadafa06543f56cbf00";
 
-        new GithubClient(token);
+        window.gh = new GithubClient(token);
     })
 
 }
