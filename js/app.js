@@ -16,8 +16,9 @@ function app(){
     ).then(function(){
         document.querySelector("html").style.opacity = 1;
         // start app?
+        //
+        //
         var token = "da9d4d1c7a5011d319df5dadafa06543f56cbf00";
-
         window.gh = new GithubClient(token);
     })
 

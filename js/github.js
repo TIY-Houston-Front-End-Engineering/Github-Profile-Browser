@@ -18,6 +18,7 @@
         })
         var router = new GithubRouter();
 
+        this.listenToEvents();
         this.draw();
     }
 
@@ -59,6 +60,20 @@
         loadTemplate: function(name){
             // modify the event context, return only the data
             return $.get("./templates/"+name+".html").then(function(d, s, p){ return d; })
+        },
+
+        listenToEvents: function(){
+            var right_side = $(".github-grid > *:nth-child(2)");
+
+            right_side.on("click", "a", function(event){
+                event.preventDefault();
+                window.open(this.href,'_blank');
+            })
+
+            right_side.on("click", "input", function(event){
+                event.preventDefault();
+                this.select();
+            })
         },
 
         draw: function(){

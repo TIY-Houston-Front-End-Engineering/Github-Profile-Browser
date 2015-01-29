@@ -66,6 +66,25 @@ img {max-width:100%;}
 body {
     transition: opacity .25s ease;
     font-family: 'Slabo 27px', sans-serif;
+
+    $c: blue;
+    // background: #082838;
+    background-image: linear-gradient(
+        to right,
+        rgba($c, 0),
+        rgba($c, 0) #{15px},
+        rgba($c, .1) #{15px},
+        rgba($c, .1) #{16px}
+    ), linear-gradient(
+        to bottom,
+        rgba($c, 0),
+        rgba($c, 0) #{15px},
+        rgba($c, .1) #{15px},
+        rgba($c, .1) #{16px}
+    );
+
+    background-size: 16px 16px;
+
 }
 
 html, body, .github-grid, .github-grid > *:nth-child(1) {
@@ -111,7 +130,7 @@ html, body, .github-grid, .github-grid > *:nth-child(1) {
         .avatar {
             min-height: 400px;
             background-size: cover;
-            background-position: center;
+            background-position: top center;
             margin-bottom: 1.5em;
         }
 
@@ -153,6 +172,9 @@ html, body, .github-grid, .github-grid > *:nth-child(1) {
 }
 
 .profile-grid {
+    > *:nth-child(1){
+        box-shadow: 0 .25em 1em rgba(black, 0.2);
+    }
     > *:nth-child(2){
         > * {
             display: inline-block;
@@ -172,5 +194,7 @@ html, body, .github-grid, .github-grid > *:nth-child(1) {
         border: 1px solid #ccc;
         border-radius: 5px;
         margin-bottom: 1rem;
+        background-color: white;
+        box-shadow: 0 .25em 1em rgba(black, 0.2);
     }
 }
